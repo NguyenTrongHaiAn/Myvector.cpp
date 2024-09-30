@@ -49,3 +49,4 @@ void erase(size_t pos , const T& value); //chèn phần tử value vào vị tr�
 void resize(size_t new_size);// thay đổi kích thước
 void swap(Myvector<T>&other);//hóan đổi nd với vector khác
 }
+

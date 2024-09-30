@@ -72,3 +72,9 @@ begin() và end() — Trả về iterator đầu và sau cuối của vector.
 
 v1 = v2; — Sao chép tất cả phần tử của v2 sang v1.
 vector<int> v(v2); — Khởi tạo v với các phần tử từ v2.
+
+# BIÊN DỊCH CODE 
+Khi có nhiều file .cpp chứa phần định nghĩa hàm,  sẽ biên dịch tất cả các file đó cùng với file main.cpp.
+VÍ DỤ
+
+g++ main.cpp Myvector_constructors.cpp Myvector_capacity.cpp Myvector_access.cpp -o myvector
