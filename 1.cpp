@@ -34,7 +34,7 @@ size=0;
 capacity=initial_capacity; // Khởi tạo với dung lượng ban đầu do người dùng cung cấp
 data =new T[capacity];
 cout<<"The vector is initialized with a capacity of" << capacity << std::endl;
- 
+}
  
 template <typename T> 
 
@@ -43,5 +43,4 @@ delete[] data;
 cout<<"memory has been freed"<<endl;
 
 
-}
 }
