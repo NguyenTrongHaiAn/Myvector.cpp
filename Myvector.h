@@ -2,7 +2,11 @@
  #define MYVECTOR_H
  
  #include<bits/stdc++.h>
+  
 
+  /* template là một tính năng cho phép viết code chung cho nhiều kiểu dữ liệu khác nhau
+  từ khóa typename được sử dụng để chỉ định rằng một tên  đại diện
+  */
 template <typename T> 
 
 class MYvector {

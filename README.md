@@ -2,7 +2,7 @@
 HELLO , WE ARE GROUP 1  
 
 **Định nghĩa vector C++ là gì?**
-Trong ngôn ngữ lập trình C++, vector là một cấu trúc dữ liệu dạng mảng động có sẵn trong thư viện chuẩn của C++. Vector cung cấp cơ sở lưu trữ, quản lý dữ liệu linh hoạt và nó có thể tự động mở rộng trong những trường hợp cần thiết. 
+Trong ngôn ngữ lập trình C++, vector là một cấu trúc dữ liệu dạng **mảng động** có sẵn trong thư viện chuẩn của C++. Vector cung cấp cơ sở lưu trữ, quản lý dữ liệu linh hoạt và nó có thể tự động mở rộng trong những trường hợp cần thiết. 
 
 **Một số điểm quan trọng về vector trong C++ bao gồm:**
 
