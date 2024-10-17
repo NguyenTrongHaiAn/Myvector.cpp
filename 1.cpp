@@ -11,12 +11,12 @@ Myvector(): Đây là hàm constructor không có tham số (constructor rỗng)
   
   khai báo một template trình biên dịch cần biết 
   rằng những hàm này sẽ được tạo ra cho các kiểu dữ liệu khác nhau. Template là một phần của tính năng  trong C++, 
-  cho phép bạn tạo ra các hàm và lớp có thể hoạt động với nhiều kiểu dữ liệu khác nhau 
+  cho phép tạo ra các hàm và lớp có thể hoạt động với nhiều kiểu dữ liệu khác nhau 
   mà không cần phải viết lại mã
 
 
 Câu lệnh delete[] data; sẽ:
-Xác định rằng data là một con trỏ đến một mảng (do bạn đã sử dụng new[] để cấp phát).
+Xác định rằng data là một con trỏ đến một mảng (do đã sử dụng new[] để cấp phát).
 Giải phóng bộ nhớ mà data đang trỏ tới.
 
 */
@@ -29,7 +29,7 @@ cout<<"empty Myvector is initialized "<<endl;
 }
 
 template <typename T>
-Myvector<T>::Myvector(size_t initial_capacity){
+Myvector::Myvector(size_t initial_capacity){
 size=0;
 capacity=initial_capacity; // Khởi tạo với dung lượng ban đầu do người dùng cung cấp
 data =new T[capacity];
@@ -39,8 +39,23 @@ cout<<"The vector is initialized with a capacity of" << capacity << std::endl;
 template <typename T> 
 
 Myvector<T>::~Myvector(){
-delete[] data;
+delete[] data<T>;
 cout<<"memory has been freed"<<endl;
 
 
+}
+
+template <typename T>
+Myvector<T>::Myvector(std::initializer_list<T> init) {
+    size = init.size(); // Kích thước từ danh sách
+    capacity = size; // Đặt dung lượng bằng kích thước
+    data = new T[capacity]; // Cấp phát bộ nhớ cho mảng
+
+    // Sao chép các phần tử từ danh sách vào mảng
+    size_t index = 0;
+    for (const T& value : init) {
+        data[index++] = value;
+    }
+
+    std::cout << "Myvector constructor với danh sách được gọi" << std::endl;
 }

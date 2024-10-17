@@ -1,16 +1,22 @@
 # Myvector.cpp 
-HELLO , WE ARE GROUP 1  
+ GROUP 1  
 
 **Định nghĩa vector C++ là gì?**
 Trong ngôn ngữ lập trình C++, vector là một cấu trúc dữ liệu dạng **mảng động** có sẵn trong thư viện chuẩn của C++. Vector cung cấp cơ sở lưu trữ, quản lý dữ liệu linh hoạt và nó có thể tự động mở rộng trong những trường hợp cần thiết. 
 
+Không giống như array (mảng), chỉ một số giá trị nhất định có thể được lưu trữ dưới một tên biến duy nhất. Vector trong C++ giống dynamic array (mảng động) nhưng có khả năng tự động thay đổi kích thước khi một phần tử được chèn hoặc xóa tùy thuộc vào nhu cầu của tác vụ được thực thi, với việc lưu trữ của chúng sẽ được vùng chứa tự động xử lý. Các phần tử vector được đặt trong contiguous storage (bộ nhớ liền kề) để chúng có thể được truy cập và duyệt qua bằng cách sử dụng iterator.
+
+
 **Một số điểm quan trọng về vector trong C++ bao gồm:**
+
+
 
 1 :Động cơ lý tưởng cho việc thêm/xóa phần tử: Vector cho phép thêm phần tử vào cuối mảng và xóa phần tử từ cuối mảng một cách hiệu quả với độ phức tạp O(1).
 
 2 :Truy cập ngẫu nhiên: Vector cho phép truy cập các phần tử trong mảng thông qua chỉ số, cho phép truy cập ngẫu nhiên với độ phức tạp O(1).
 
 3 :Tự động thay đổi kích thước: Vector có khả năng tự động điều chỉnh kích thước khi cần thiết, tự động tăng kích thước khi thêm phần tử mới vào và tự động giảm kích thước khi xóa phần tử ra khỏi vector.
+
 
 **Dưới đây là một ví dụ về cách sử dụng vector trong C++:**
 
