@@ -21,7 +21,7 @@ public:
 Myvector(); //tạo hàm rỗng
 Myvector(size_t initial_capacity); // tạo hàm với initial_capacity dung lượng ban đầu
 ~Myvector() ; //hủy và giải phóng bộ nhớ
-
+ Myvector(std::initializer_list<T> init);
 /*số phần tử khác dung lượng
 Nếu vector có dung lượng(capacity) hiện tại là 5, 
 nhưng bạn chỉ thêm 3 phần tử(size), thì dung lượng vẫn là 5
@@ -42,14 +42,13 @@ T& operator[](size_t index); //truy cap phan tu x thuoc N
 T& at(size_t index); //truy cập phần tử (0=< x <=n)
 //định nghĩa hàm at ,trả vệ phần tử vị trí index
 
-T& front();                             // Trả về phần tử đầu tiên
-T& back();                              // Trả về phần tử cuối cùng
+erase(size_t index);//xóa phần tử vị trí index
 
 // 4. Sự sửa đổi trong Myvector
 void push_back(const T& value);//thêm value vào cuối vector
 void pop_back(); // xóa phần tử cuối
 void clear ; // xóa tât cả phần tử
-void erase(size_t pos , const T& value); //chèn phần tử value vào vị trí pos
+void insert(size_t pos , const T& value); //chèn phần tử value vào vị trí pos
 void resize(size_t new_size);// thay đổi kích thước
 void swap(Myvector<T>&other);//hóan đổi nd với vector khác
 }
