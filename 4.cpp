@@ -1,13 +1,12 @@
 #include "Myvector.h"
 
-#include <bits/sdtc++.h>
-=======
+
 #include <iostream>
 
 using namespace std;
 
 template <typename T>
-void push_back(const T& value) {
+void Myvector<T>:: push_back(const T& value) {
     // Nếu dung lượng tối đa, nhân đôi dung lượng
     if (size >= capacity) {
         // Nếu chưa có dung lượng, tạo dung lượng khởi tạo
@@ -19,7 +18,7 @@ void push_back(const T& value) {
 }
 
 template <typename T>
-void pop_back() {
+void Myvector<T>:: pop_back() {
     if (size > 0) {
 
         size--; // Giảm kích thước để xóa phần tử cuối
@@ -27,22 +26,7 @@ void pop_back() {
 }
 
 template <typename T>
-void clear() {
-    size = 0; // Trả kích thước về 0, xóa tất cả phần tử
-}
-
-template <typename T>
-void erase(size_t pos, const T& value) {
-
-        size--; // Giảm kích thước
-    } else {
-        std::cout << "Vector is empty, cannot pop!" << std::endl;
-    }
-
-
-
-template <typename T>
-void clear() {
+void Myvector<T>:: clear() {
     delete[] data; // Giải phóng bộ nhớ đã cấp phát
     data = nullptr; // Đặt con trỏ thành nullptr
     size = 0; // Trả lại kích thước về 0
@@ -51,7 +35,7 @@ void clear() {
 
 
 template <typename T>
-void erase(size_t pos) {
+void Myvector<T>:: erase(size_t pos) {
 
     if (pos < size) {
         // Dịch các phần tử về bên để ghi đè phần tử tại pos
@@ -63,7 +47,7 @@ void erase(size_t pos) {
 }
 
 template <typename T>
-void resize(size_t new_size) {
+void Myvector<T>:: resize(size_t new_size) {
     if (new_size > capacity) {
         reserve(new_size); // Đảm bảo đủ dung lượng
     }
@@ -71,7 +55,7 @@ void resize(size_t new_size) {
 }
 
 template <typename T>
-void swap(MYvector<T>& other) {
+void Myvector<T>:: swap(Myvector<T>& other) {
     std::swap(data, other.data);
     std::swap(size, other.size);
     std::swap(capacity, other.capacity);
@@ -80,7 +64,7 @@ void swap(MYvector<T>& other) {
 
 //chèn phần tử ở vị trí pos
 template <typename T>
-bool MYvector<T>::insert(size_t pos, const T& value) {
+bool Myvector<T>::insert(size_t pos, const T& value) {
     // Kiểm tra vị trí hợp lệ
     if (pos > size) {
         std::cerr << "Error: Position out of range" << std::endl;

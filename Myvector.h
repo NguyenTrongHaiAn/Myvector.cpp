@@ -1,7 +1,10 @@
 #ifndef MYVECTOR_H
  #define MYVECTOR_H
  
- #include<bits/stdc++.h>
+ #include<iostream>
+ #include <initializer_list>
+ #include <stdexcept>
+
   
 
   /* template là một tính năng cho phép viết code chung cho nhiều kiểu dữ liệu khác nhau
@@ -9,7 +12,7 @@
   */
 template <typename T> 
 
-class MYvector {
+class Myvector {
 private:
 T* data;
 //size_t là một kiểu dữ liệu trong C++ dược định nghĩa để đại diện cho kích thước của các đối tượng trong bộ nhớ
@@ -29,8 +32,8 @@ size là 3
 */
 
 //2. Dung lượng,kích thước , số phần tử
-size_t size() const ; //số phần tử hiện tại 
-size_t capacity() const ; //dung lượng hiện tại
+size_t size_() const ; //số phần tử hiện tại 
+size_t capacity_() const ; //dung lượng hiện tại
 bool empty() const; //kiểm tra dung lượng trống không
 void reserve(size_t new_capacity);//cấp phát(bổ sung) nếu cần thêm bộ nhớ
 void shrink_to_fit() ;//giảm dung lượng fit với kích thước hiện tại
@@ -41,16 +44,17 @@ T& operator[](size_t index); //truy cap phan tu x thuoc N
 
 T& at(size_t index); //truy cập phần tử (0=< x <=n)
 //định nghĩa hàm at ,trả vệ phần tử vị trí index
-
+void erase(size_t index);//xóa phần tử vị trí index
 
 
 // 4. Sự sửa đổi trong Myvector
-erase(size_t index);//xóa phần tử vị trí index
+void erase(size_t index);//xóa phần tử vị trí index
 void push_back(const T& value);//thêm value vào cuối vector
 void pop_back(); // xóa phần tử cuối
-void clear ; // xóa tât cả phần tử
+void clear() ; // xóa tât cả phần tử
 void insert(size_t pos , const T& value); //chèn phần tử value vào vị trí pos
 void resize(size_t new_size);// thay đổi kích thước
 void swap(Myvector<T>&other);//hóan đổi nd với vector khác
-}
+};
 
+#endif

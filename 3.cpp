@@ -1,5 +1,5 @@
 #include<iostream>
-#include<Myvector.h>
+#include"Myvector.h"
 using namespace std;
 
 template <typename T>
@@ -21,7 +21,7 @@ T& Myvector<T>::operator[](size_t index) {
 
 //xóa phần tử ở vị trí inddex
 template <typename T>
-void MyVector<T>::erase(size_t index) {
+void Myvector<T>::erase(size_t index) {
     // Kiểm tra nếu vector rỗng hoặc index không hợp lệ
     if (size == 0) {
         std::cerr << "Error: Cannot erase from an empty vector." << std::endl;

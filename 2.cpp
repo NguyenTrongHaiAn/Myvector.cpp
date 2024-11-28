@@ -1,5 +1,5 @@
-#inlcude<iostream>
-#inlcude "Myvector.h"
+#include<iostream>
+#include "Myvector.h"
 /*const trong phương thức: Đảm bảo rằng phương thức không thay đổi trạng thái của đối tượng.
 Gọi phương thức trên đối tượng const: Chỉ những phương thức được
  định nghĩa là const mới có thể được gọi trên các đối tượng const.
@@ -7,14 +7,14 @@ Gọi phương thức trên đối tượng const: Chỉ những phương thức
  trong mục này sẽ thấy nhận ra xuất hiện mảng có tên data ,xem lại file 1.cpp hàm khởi tạo 
  sẽ thấy ta đã khởi tạo cấp phát mảng động cho con trỏ data
  */
-
-size_t Myvector<T>::size() const{
+template <typename T>
+size_t Myvector<T>::size_() const{
 
     return size;
 }
 
 template <typename T>
-size_t Myvector<T>::capacity() const {
+size_t Myvector<T>::capacity_() const {
 
     return capacity ;
 }
@@ -33,7 +33,7 @@ bool Myvector<T>::empty() const {
 template <typename T> 
 void Myvector<T>::reserve(size_t new_capacity){
     if(new_capacity > capacity){
-        T* new_data = new T[new_capacity]//cấp phát mảng mới vùng nhớ heap kthuoc là new_capacity
+        T* new_data = new T[new_capacity];//cấp phát mảng mới vùng nhớ heap kthuoc là new_capacity
         for(int i=0; i<size ; i++){
             new_data[i]=data[i];//sao chép phần tử 
         }
@@ -60,9 +60,9 @@ void Myvector<T>:: shrink_to_fit(){
 
 }
 
-
+template <typename T>
 //in các phần tử 
-void print() const {
+void Myvector<T>:: print() const {
         for (size_t i = 0; i < size; ++i) {
             std::cout << data[i] << " ";
         }

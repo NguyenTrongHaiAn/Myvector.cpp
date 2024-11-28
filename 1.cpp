@@ -29,7 +29,7 @@ cout<<"empty Myvector is initialized "<<endl;
 }
 
 template <typename T>
-Myvector::Myvector(size_t initial_capacity){
+Myvector<T>::Myvector(size_t initial_capacity){
 size=0;
 capacity=initial_capacity; // Khởi tạo với dung lượng ban đầu do người dùng cung cấp
 data =new T[capacity];
@@ -39,7 +39,7 @@ cout<<"The vector is initialized with a capacity of" << capacity << std::endl;
 template <typename T> 
 
 Myvector<T>::~Myvector(){
-delete[] data<T>;
+delete[] data;
 data=nullptr;
 cout<<"memory has been freed"<<endl;
 
