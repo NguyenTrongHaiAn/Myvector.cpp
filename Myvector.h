@@ -34,7 +34,7 @@ size_t capacity() const ; //dung lượng hiện tại
 bool empty() const; //kiểm tra dung lượng trống không
 void reserve(size_t new_capacity);//cấp phát(bổ sung) nếu cần thêm bộ nhớ
 void shrink_to_fit() ;//giảm dung lượng fit với kích thước hiện tại
-
+ void print() const ; //hàm in các phần tử
 //3.Truy cập phần tử 
 T& operator[](size_t index); //truy cap phan tu x thuoc N
 //index chỉ số ,hàm định nghĩa toán tử [] , từ operator để định nghĩa cú pháp
@@ -42,9 +42,10 @@ T& operator[](size_t index); //truy cap phan tu x thuoc N
 T& at(size_t index); //truy cập phần tử (0=< x <=n)
 //định nghĩa hàm at ,trả vệ phần tử vị trí index
 
-erase(size_t index);//xóa phần tử vị trí index
+
 
 // 4. Sự sửa đổi trong Myvector
+erase(size_t index);//xóa phần tử vị trí index
 void push_back(const T& value);//thêm value vào cuối vector
 void pop_back(); // xóa phần tử cuối
 void clear ; // xóa tât cả phần tử

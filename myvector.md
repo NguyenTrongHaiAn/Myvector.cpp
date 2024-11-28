@@ -1,8 +1,8 @@
 # MYvectorhoạt động giống như std::vector trong C++, lưu trữ các phần tử trong một mảng động và tự động quản lý dung lượng bộ nhớ. Cụ thể:
 
-Kiểu lưu trữ:
+Cấu trúc lưu trữ:
 
-MYvector lưu trữ các phần tử theo **dạng tuần tự**, nghĩa là sử dụng một mảng động để chứa dữ liệu
+MYvector lưu trữ các phần tử theo **cấu trúc tuần tự**, nghĩa là sử dụng một mảng động để chứa dữ liệu
  sử dụng bộ nhớ liên tục (contiguous memory)  Điều này có nghĩa là các phần tử của vector được lưu trữ liền kề nhau trong bộ nhớ, giúp tăng tốc độ truy cập phần tử nhờ vào địa chỉ bộ nhớ.
 
 Con trỏ T*data sẽ trỏ đến vùng nhớ mà các phần tử được lưu trữ.

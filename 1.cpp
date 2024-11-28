@@ -1,5 +1,5 @@
 #include "Myvector.h"
-#include <bits/sdtc++.h>
+#include <iostream>
 using namespace std ;
 
 /*<T>: Biểu thị rằng Myvector là một class template và nó có thể chứa 
@@ -40,6 +40,7 @@ template <typename T>
 
 Myvector<T>::~Myvector(){
 delete[] data<T>;
+data=nullptr;
 cout<<"memory has been freed"<<endl;
 
 

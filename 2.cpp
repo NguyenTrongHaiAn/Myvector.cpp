@@ -1,4 +1,4 @@
-#inlcude<bits/stdc++.h>
+#inlcude<iostream>
 #inlcude "Myvector.h"
 /*const trong phương thức: Đảm bảo rằng phương thức không thay đổi trạng thái của đối tượng.
 Gọi phương thức trên đối tượng const: Chỉ những phương thức được
@@ -34,7 +34,7 @@ template <typename T>
 void Myvector<T>::reserve(size_t new_capacity){
     if(new_capacity > capacity){
         T* new_data = new T[new_capacity]//cấp phát mảng mới vùng nhớ heap kthuoc là new_capacity
-        for(int i=1; i<size ; i++){
+        for(int i=0; i<size ; i++){
             new_data[i]=data[i];//sao chép phần tử 
         }
         delete[] data; //xóa dữ liệu cũ
@@ -44,7 +44,7 @@ void Myvector<T>::reserve(size_t new_capacity){
 
     }
 }
-
+//shrink to fit
 template <typename T>
 void Myvector<T>:: shrink_to_fit(){
     if(capacity>size){
@@ -59,3 +59,12 @@ void Myvector<T>:: shrink_to_fit(){
     }
 
 }
+
+
+//in các phần tử 
+void print() const {
+        for (size_t i = 0; i < size; ++i) {
+            std::cout << data[i] << " ";
+        }
+        std::cout << std::endl;
+    }
