@@ -53,9 +53,10 @@ void Myvector<T>:: shrink_to_fit(){
             new_data[i]=data[i];
 
         }
-    delete[] data;
+    
     data=new_data;//con trỏ data trỏ tới mảng mà con trỏ new_data trỏ ,gán địa chỉ mảng 
     capacity=size;//cập nhật dung lượng sao fit 
+    delete[] data;
     }
 
 }

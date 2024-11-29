@@ -40,6 +40,7 @@ public:
     void insert(size_t pos, const T& value);   // Inserts an element at the given position
     void resize(size_t new_size);              // Resizes the vector
     void swap(Myvector<T>& other);             // Swaps two vectors
+    void sort();          // sắp xếp các phần tử trong vector
 };
 
 // Default constructor
@@ -262,9 +263,11 @@ int main() {
 
     // Add elements for testing
     vec.reserve(5);
-    vec[0] = 10;
-    vec[1] = 20;
-    vec[2] = 30;
+    cout<<"size is :"<<vec.size_()<<endl;
+    cout<<"capacity is "<<vec.capacity_()<<endl;
+    vec.push_back(10) ;
+    vec.push_back(20);
+    vec.push_back(30) ;
 
     std::cout << "Before erase:" << std::endl;
     vec.print();

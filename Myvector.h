@@ -48,6 +48,7 @@ void erase(size_t index);//xóa phần tử vị trí index
 
 
 // 4. Sự sửa đổi trong Myvector
+void sort(); // sắp xếp các phần tử trong vector
 void erase(size_t index);//xóa phần tử vị trí index
 void push_back(const T& value);//thêm value vào cuối vector
 void pop_back(); // xóa phần tử cuối

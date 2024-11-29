@@ -90,3 +90,17 @@ bool Myvector<T>::insert(size_t pos, const T& value) {
 
     return true; // Chèn thành công
 }
+
+template <typename T>
+void Myvector<T>::sort() {
+    for (size_t i = 0; i < size - 1; ++i) {
+        for (size_t j = 0; j < size - i - 1; ++j) {
+            if (data[j] > data[j + 1]) {
+                // Swap data[j] and data[j + 1]
+                T temp = data[j];
+                data[j] = data[j + 1];
+                data[j + 1] = temp;
+            }
+        }
+    }
+}
